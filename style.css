@@ -35,13 +35,13 @@ body{
 
 
 p{
-    font-size: clamp(1rem , 2vw , 1.5rem);
+    font-size: min(1rem  , 1.5rem);
     font-weight: bold;
     line-height: 1.5;
     opacity: .5;
 }
 span{
-    font-size: clamp(.5rem , 1vw , 1.2rem);
+    font-size: min(.5rem  , 1.2rem);
     opacity: .5;
 }
 .header-left{
@@ -71,7 +71,7 @@ span{
 .chat{
     width: 80%;
     max-width: 360px;
-    height: 90vh;
+    height: 40rem;
     margin-inline: auto;
     margin-block-start:2rem ;
     display: flex;
@@ -191,16 +191,16 @@ span{
 
 .chat-footer{
     width: 90%;
-    margin-block: 1.5rem;
-    margin-inline: auto;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-self: center;
     align-items: center;
     font-size: 2rem;
+    margin-block-start: 2rem;
 }
 .chat-footer input{
     width: 100%;
+    align-self: center;
     padding: 1rem;
     border-radius: 30px;
     border: none;
@@ -215,8 +215,9 @@ span{
 .footer{
     width: 90%;
     text-align: center;
-    margin:2rem auto;
+    margin: 2rem auto;
     max-width: 400px;
+    
 }
 .footer h1{
     margin-block-end: 2rem;
@@ -224,6 +225,7 @@ span{
 }
 .footer p{
     margin-block-end: 2rem;
+    text-align: justify;
 }
 
 @media (min-width:48em)
@@ -248,6 +250,7 @@ span{
     }
     .footer{
         max-width: 40%;
+        text-align: start;
     }
    
     
