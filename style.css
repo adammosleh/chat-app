@@ -94,7 +94,7 @@ span{
     width: 40%;
     max-width: 200px;
     padding:.8rem  1rem;
-    position: fixed;
+    position: absolute;
     z-index: 1000;
     margin-block-start: -.5rem;
     margin-inline-start: 4.3rem;
