@@ -61,7 +61,7 @@ span{
     position: absolute;
     inset-inline-end:-3rem ;
     inset-block-end: -3rem;
-    background-color:  hsla(242, 61%, 89% ,.3);
+    background-color:  hsla(0, 39%, 93%, 0.3);
     
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
