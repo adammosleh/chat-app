@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Cairo:wght@200..1000&family=DM+Sans:ital,opsz,wght@0,9..40,500;1,9..40,500&family=Epunda+Sans:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,500;1,9..144,500&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,500;1,500&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+body{
+      font-family: "Rubik", sans-serif;
+      /* font-weight: 400 , 500 , 700 */
+      height: 100vh;
+      position: relative;
+      line-height: 1;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+    /* color  text  primary */
+    --Purpl-300: hsl(276, 100%, 81%);
+    --Purple-600: hsl(276, 55%, 52%);
+    --Gray-500: hsl(270, 7%, 64%);
+    --Gray-300: hsl(206, 6%, 79%);
+    --Purple-950: hsl(271, 36%, 24%);
+    /* gradients  */
+    --Pink-500: hsl(293, 100%, 63%);
+    --Purple-500: hsl(264, 100%, 61%);
+    
+    /* secondary colors */
+    --White: hsl(0, 100%, 100%);
+    --Gray-100: hsl(270, 20%, 96%);
+    --Purple-950: hsl(271, 36%, 24%);
+    --Pink-400: hsl(289, 100%, 72%);
+
+}
+
+
+p{
+    font-size: clamp(1rem , 2vw , 1.5rem);
+    font-weight: bold;
+    line-height: 1.5;
+    opacity: .5;
+}
+span{
+    font-size: clamp(.5rem , 1vw , 1.2rem);
+    opacity: .5;
+}
+.header-left{
+    width: 300px;
+    height: 60vh;
+    background: linear-gradient(45deg , var(--Purple-500), var(--Pink-500));
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    position: absolute;
+    inset-block-start: -3rem;
+    inset-inline-start: -10%;
+    z-index: -1000;
+}
+.header-right{
+    width: 300px;
+    height: 60vh;
+    position: absolute;
+    inset-inline-end:-3rem ;
+    inset-block-end: -3rem;
+    background-color:  hsla(242, 61%, 89% ,.3);
+    
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    z-index: -1000;
+}
+
+.chat{
+    width: 80%;
+    max-width: 360px;
+    height: 90vh;
+    margin-inline: auto;
+    margin-block-start:2rem ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--Gray-300);
+    border-radius: 30px;
+    background-color: var(--White);
+    box-shadow: 10px 10px 50px 5px var(--Gray-300) ;
+}
+.chat-app{
+    width: 95%;
+    height: 97%;
+    margin: auto;
+    border: 2px solid var(--Gray-300);
+    border-radius: 30px;
+    background-color: var(--Gray-100);
+}
+.chat-app-header-button{
+    width: 40%;
+    max-width: 200px;
+    padding:.8rem  1rem;
+    position: fixed;
+    z-index: 1000;
+    margin-block-start: -.5rem;
+    margin-inline-start: 4.3rem;
+    background-color: var(--White);
+    border: none;
+    border-end-end-radius: 10px;
+    border-end-start-radius: 10px;
+}
+
+.chat-app-header{
+    width: 100%;
+    background: linear-gradient(20deg , var(--Purple-500) , var(--Pink-500));
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-block: 1.5rem;
+    color: var(--White);
+    border-start-end-radius: 30px;
+    border-start-start-radius: 30px;
+    overflow: hidden;
+}
+.chat-app-header-left{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: .5rem;
+    
+}
+.chat-app-header-left img{
+    width: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+.chat-app-body{
+    max-width: 100%;
+    margin: .5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+.chat-sent{
+    max-width: 70%;
+    margin-inline-end: auto;
+    align-self: flex-start;
+    text-align: left;
+    background-color: var(--Gray-300);
+    color: var(--Pink-500);
+    padding: .5rem;
+    border-start-start-radius: 10px;
+    border-start-end-radius: 10px;
+    border-end-end-radius: 10px;
+}
+.chat-receivd{
+    max-width: 70%;
+    align-self: flex-end;
+    text-align: left;
+    margin-inline-end: -.1rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    padding: .5rem;
+    background-color: var(--White);
+    border-start-start-radius: 10px;
+    border-start-end-radius: 10px;
+    border-end-start-radius: 10px;
+    box-shadow: 0 10px 10px 0 var(--Gray-300);
+}
+.chat-receivd-img{
+    max-width: 70%;
+    align-self: flex-end;
+}
+.chat-receivd-img img{
+    width: 50px;
+    border-radius: 10px;
+}
+
+
+.chat-sent-button{
+    background:linear-gradient(to left , var(--Pink-500 ), var(--Purple-600) );
+    color: var(--White);
+    width: 80%;
+    padding: .5rem 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 2rem;
+    padding: 1rem;
+}
+.chat-sent-button-content i{
+    margin-inline-start: -.5rem;
+}
+
+.chat-footer{
+    width: 90%;
+    margin-block: 1.5rem;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+.chat-footer input{
+    width: 100%;
+    padding: 1rem;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+}
+.chat-footer i{
+    margin-inline-start: -3rem;
+    color: var(--Purple-950);
+}
+
+
+.footer{
+    width: 90%;
+    text-align: center;
+    margin:2rem auto;
+    max-width: 400px;
+}
+.footer h1{
+    margin-block-end: 2rem;
+    font-size: clamp(1.5rem , 2vw +.5rem , 2rem);
+}
+.footer p{
+    margin-block-end: 2rem;
+}
+
+@media (min-width:48em)
+{
+    body{
+        overflow:hidden ;
+    }
+    .header-left{
+        width: 30%;
+        height: 80vh;
+    }
+    .header-right{
+        width: 30%;
+        height: 80vh;
+    }
+    .main{
+        min-height: 100vh;
+        margin-inline:5rem;
+        display: flex;
+        align-items: center;
+        justify-self: center;
+    }
+    .footer{
+        max-width: 40%;
+    }
+   
+    
+}
