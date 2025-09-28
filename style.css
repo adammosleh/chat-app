@@ -48,19 +48,19 @@ span{
     opacity: .5;
 }
 .header-left{
-    width: 300px;
+    width: calc(20rem - .5vw);
     height: 60vh;
     background: linear-gradient(45deg , var(--Purple-500), var(--Pink-500));
     border-bottom-right-radius: 50%;
     border-bottom-left-radius: 50%;
     position: absolute;
     inset-block-start: -3rem;
-    inset-inline-start: -10%;
+    inset-inline-start: -5%;
     z-index: -1000;
 }
 .header-right{
-    width: 300px;
-    height: 60vh;
+    width: calc(20rem - .5vw);
+    height: 40rem;
     position: absolute;
     inset-inline-end:-3rem ;
     inset-block-end: -3rem;
@@ -254,7 +254,7 @@ span{
         height: 616px;
     }
     .main{
-        width: 60rem;
+        width: calc(60rem + .5vw);
         margin: auto;
         height: 100vh;
         display: flex;
