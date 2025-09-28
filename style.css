@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Cairo:wght@200..1000&family=DM+Sans:ital,opsz,wght@0,9..40,500;1,9..40,500&family=Epunda+Sans:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,500;1,9..144,500&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,500;1,500&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 body{
-      font-family: "Rubik", sans-serif;
+     
       /* font-weight: 400 , 500 , 700 */
       height: 100vh;
       position: relative;
       line-height: 1;
+      overflow-x: hidden;
 }
 *{
     margin: 0;
@@ -14,7 +15,9 @@ body{
 }
 
 
+
 :root{
+     font-family: "Rubik", sans-serif;
     /* color  text  primary */
     --Purpl-300: hsl(276, 100%, 81%);
     --Purple-600: hsl(276, 55%, 52%);
@@ -35,13 +38,13 @@ body{
 
 
 p{
-    font-size: min(1rem  , 1.5rem);
+    font-size: min(1.2rem  , 1.5rem);
     font-weight: bold;
     line-height: 1.5;
     opacity: .5;
 }
 span{
-    font-size: min(.5rem  , 1.2rem);
+    font-size: min(.7rem  , 1.2rem);
     opacity: .5;
 }
 .header-left{
@@ -66,6 +69,13 @@ span{
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
     z-index: -1000;
+    
+}
+.main{
+    padding-block-end: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-content: center;
 }
 
 .chat{
@@ -81,6 +91,7 @@ span{
     border-radius: 30px;
     background-color: var(--White);
     box-shadow: 10px 10px 50px 5px var(--Gray-300) ;
+    
 }
 .chat-app{
     width: 95%;
@@ -183,7 +194,6 @@ span{
     justify-content: space-between;
     align-items: center;
     row-gap: 2rem;
-    padding: 1rem;
 }
 .chat-sent-button-content i{
     margin-inline-start: -.5rem;
@@ -213,44 +223,53 @@ span{
 
 
 .footer{
-    width: 90%;
+    width: min(22.5rem  , 30rem);
     text-align: center;
-    margin: 2rem auto;
-    max-width: 400px;
+    align-self: center;
+    margin:  2rem  auto;
+    
+    
     
 }
 .footer h1{
-    margin-block-end: 2rem;
-    font-size: clamp(1.5rem , 2vw +.5rem , 2rem);
+    padding-block-end: 2rem;
+    font-size: clamp(2rem , 3vw +.5rem , 3rem);
 }
 .footer p{
     margin-block-end: 2rem;
-    text-align: justify;
+   
 }
 
-@media (min-width:48em)
+@media (min-width:48rem)
 {
     body{
         overflow:hidden ;
     }
     .header-left{
-        width: 30%;
+        width: min(30% , calc(30vw + 420px ));
         height: 80vh;
     }
     .header-right{
         width: 30%;
-        height: 80vh;
+        height: 616px;
     }
     .main{
-        min-height: 100vh;
-        margin-inline:5rem;
+        width: 60rem;
+        margin: auto;
+        height: 100vh;
         display: flex;
+        flex-direction: row;
+        justify-content: center;
         align-items: center;
-        justify-self: center;
+        
+    }
+    .chat{
+        width: 50%;
     }
     .footer{
-        max-width: 40%;
+        width: 50%;
         text-align: start;
+        align-items: center;
     }
    
     
