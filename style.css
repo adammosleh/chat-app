@@ -247,11 +247,11 @@ span{
     }
     .header-left{
         width: min(30% , calc(30vw + 420px ));
-        height: 80vh;
+        height:  calc(80vh + 2rem);
     }
     .header-right{
         width: 30%;
-        height: 616px;
+        height: calc(80vh + 2rem);
     }
     .main{
         width: calc(60rem + .5vw);
